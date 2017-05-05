@@ -16,3 +16,7 @@
 /Users/saketh/Projects/Pocket Cars/Pocket Cars/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/saketh/Projects/Pocket Cars/Pocket Cars/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/saketh/Projects/Pocket Cars/Pocket Cars/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/saketh/Projects/Pocket Cars/Pocket Cars/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/saketh/Projects/Pocket Cars/Pocket Cars/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/saketh/Projects/Pocket Cars/Pocket Cars/obj/Debug/Assembly-CSharp.dll
+/Users/saketh/Projects/Pocket Cars/Pocket Cars/obj/Debug/Assembly-CSharp.dll.mdb

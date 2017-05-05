@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField]
 	private float speed;
 	[SerializeField]
+	private float revspeed;
+	[SerializeField]
 	private float topspeed;
 	[SerializeField]
 	private float rotspeed;
@@ -32,20 +34,19 @@ public class PlayerController : MonoBehaviour {
 			rgbd.velocity = transform.forward * speed;
 		}
 		if (Input.GetKey (KeyCode.S)) {
-			speed -= acceleration;
-			if (speed < 0) {
-				rgbd.velocity = transform.forward * speed;
+			if (speed <= 0) {
+				rgbd.velocity = -transform.forward * revspeed;
 			}
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
-			if (speed > 0) {
+			if (IsMoving()) {
 				transform.Rotate (0f, -rotspeed, 0f);
 			}
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
-			if (speed > 0) {
+			if (IsMoving()) {
 				transform.Rotate (0f, rotspeed, 0f);
 			}
 		}
@@ -61,6 +62,16 @@ public class PlayerController : MonoBehaviour {
 		if (speed < topspeed) {
 			speed += acceleration;
 		}
+	}
+
+	bool IsMoving(){
+		if (rgbd.velocity.x != 0 ||
+		    rgbd.velocity.y != 0 ||
+		    rgbd.velocity.z != 0) {
+			return true;
+		}
+
+		return false;
 	}
 
 
